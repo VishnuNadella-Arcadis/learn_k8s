@@ -4,6 +4,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mongo-express-ingress
+  namespace: mongodb-app-ns
 spec:
   rules:
   - host: mongoapp.local
