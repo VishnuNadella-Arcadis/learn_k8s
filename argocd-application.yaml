@@ -19,6 +19,4 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
-    # webhook:
-    #   allow: true
-    #   status: true
+    
