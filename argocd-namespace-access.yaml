@@ -1,5 +1,5 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
   name: argocd-namespace-manager
   namespace: argocd
@@ -9,13 +9,13 @@ rules:
     verbs: ["get", "list", "create", "delete", "patch", "update"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: argocd-namespace-manager-binding
   namespace: argocd
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: argocd-namespace-manager
 subjects:
   - kind: ServiceAccount
