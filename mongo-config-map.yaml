@@ -4,4 +4,4 @@ metadata:
   name: mongo-db-config-map
   namespace: mongodb-app-ns
 data:
-  database_url: mongodb-service # server name is name of the service
+  database_url: mongodb-service

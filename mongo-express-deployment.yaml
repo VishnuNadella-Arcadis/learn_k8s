@@ -56,7 +56,7 @@ metadata:
 spec:
   selector:
     app: mongo-express
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: mongo-express-port
     protocol: TCP
