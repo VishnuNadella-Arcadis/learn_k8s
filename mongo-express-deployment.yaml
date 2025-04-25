@@ -56,10 +56,9 @@ metadata:
 spec:
   selector:
     app: mongo-express
-  type: LoadBalancer
+  type: NodePort
   ports:
   - name: mongo-express-port
     protocol: TCP
     port: 8081 # this will be for the internal services. This is like its own private VPN
     targetPort: 8081 # this will be the container's port
-   
