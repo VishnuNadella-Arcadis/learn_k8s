@@ -31,6 +31,22 @@ spec:
               secretKeyRef:
                 name: mongo-db-secret
                 key: mongo-root-password
+        livenessProbe:
+          exec:
+            command:
+            - mongo
+            - --eval
+            - "db.adminCommand('ping')"
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+            - mongo
+            - --eval
+            - "db.adminCommand('ping')"
+          initialDelaySeconds: 5
+          periodSeconds: 10
         
 ---
 apiVersion: v1
